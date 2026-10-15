@@ -33,11 +33,11 @@ if %errorlevel% neq 0 (
     for /f "delims=" %%i in ('where tesseract') do echo [INFO] Tesseract found: %%i
 )
 
-echo [INFO] Starting FastAPI backend on http://localhost:8000 ...
-echo        API docs: http://localhost:8000/docs
+echo [INFO] Starting FastAPI backend on http://127.0.0.1:8001 ...
+echo        API docs: http://127.0.0.1:8001/docs
 echo        Press Ctrl+C to stop.
 echo.
 cd /d "%BACKEND%"
-python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn main:app --host 127.0.0.1 --port 8001 --reload
 
 endlocal

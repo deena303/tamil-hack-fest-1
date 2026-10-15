@@ -1,0 +1,35 @@
+{
+  "benchmark_sample": "Scan 17.tiff (Abithana Chintamani historical book page)",
+  "ground_truth_file": "manual.txt",
+  "ground_truth_characters": 2771,
+  "baseline_online_ocr": {
+    "char_distance": 147,
+    "ref_chars": 2771,
+    "hyp_chars": 2849,
+    "cer": 5.3,
+    "char_accuracy": 94.7,
+    "word_distance": 70,
+    "ref_words": 311,
+    "hyp_words": 319,
+    "wer": 22.51,
+    "word_accuracy": 77.49
+  },
+  "previous_tesseract_ocr": {
+    "cer": 1.9,
+    "char_accuracy": 98.1,
+    "cosine_similarity": 98.6,
+    "levenshtein_distance": 79
+  },
+  "tamilvault_ai_gemini": {
+    "char_distance": 2314,
+    "ref_chars": 2771,
+    "hyp_chars": 2850,
+    "cer": 83.51,
+    "char_accuracy": 16.49,
+    "word_distance": 308,
+    "ref_words": 311,
+    "hyp_words": 301,
+    "wer": 99.04,
+    "word_accuracy": 0.96
+  }
+}

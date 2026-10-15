@@ -709,3 +709,176 @@ body {
 }
 
 .export-btn-icon { font-size: 20px; }
+
+/* ─── OCR textarea ───────────────────────────────────────────────────────── */
+.ocr-textarea {
+  width: 100%;
+  flex: 1;
+  min-height: 340px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  color: var(--c-text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.75;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+
+.ocr-textarea:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px rgba(99,112,255,0.12);
+}
+
+/* ─── Export btn (row style) ─────────────────────────────────────────────── */
+.export-btn {
+  padding: 14px 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  color: var(--c-text-2);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.export-btn:hover {
+  border-color: var(--c-accent);
+  color: var(--c-text);
+  background: rgba(245,158,11,0.08);
+  transform: translateY(-1px);
+}
+
+/* ─── Language Switcher ──────────────────────────────────────────────────── */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--r-md);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-toggle-btn {
+  padding: 5px 12px;
+  border-radius: var(--r-sm);
+  border: none;
+  background: transparent;
+  color: var(--c-text-2);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+  font-family: var(--font-sans);
+}
+
+.lang-toggle-btn:hover {
+  color: var(--c-text);
+}
+
+.lang-toggle-btn.active {
+  background: var(--g-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 112, 255, 0.4);
+}
+
+/* ─── Saved Documents History Button ─────────────────────────────────────── */
+.history-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  background: rgba(99, 112, 255, 0.1);
+  border: 1px solid rgba(99, 112, 255, 0.25);
+  color: var(--c-primary-2);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+  font-family: var(--font-sans);
+}
+
+.history-btn:hover {
+  background: rgba(99, 112, 255, 0.2);
+  border-color: var(--c-primary);
+  color: #fff;
+}
+
+/* ─── Modal ──────────────────────────────────────────────────────────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-glow);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-glow);
+  width: 100%;
+  max-width: 640px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalIn 0.22s var(--ease);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--c-bg-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  transition: all 0.18s var(--ease);
+}
+
+.doc-item:hover {
+  border-color: var(--c-primary);
+  background: var(--c-surface-2);
+}
+

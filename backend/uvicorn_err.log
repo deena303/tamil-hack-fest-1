@@ -1,5 +1,8 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\deena\\Downloads\\Optical-Character-Recognition-main\\Optical-Character-Recognition-main\\backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1248] using WatchFiles
+INFO:ocr_engine:PyMuPDF (fitz) loaded.
 INFO:ocr_engine:google-genai SDK loaded successfully.
-INFO:     Started server process [13856]
+INFO:     Started server process [29808]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
